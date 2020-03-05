@@ -1,0 +1,16 @@
+.cart{
+    height: 14vh;
+    width: 7vh;
+    margin-bottom: 0rem;
+    margin-top: -6rem;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    height: 5rem;
+    width: 6rem;
+    align-items: flex-end;
+    margin-right: 3rem;
+    margin-top: 1rem;
+}
