@@ -32,7 +32,7 @@ const CategoryTab = (props) => {
       {
               categories.map((category) => <button type="button" onClick={() => { setCategoryProducts([]); setCategoryToShow(category); }} className={styles.button}>{category}</button>)
           }
-      <div className={styles.filter}>{categoryToShow}</div>
+      <h3 className={styles.filter}>{categoryToShow}</h3>
       <CategoryList
         catergoryProducts={catergoryProducts}
         setCartCount={setCartCount}
