@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the button component should render correctly 1`] = `
+<DocumentFragment>
+  <div>
+    <button
+      type="button"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`the button component should verify the type of button passed (round) to the component 1`] = `undefined`;

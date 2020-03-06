@@ -3,7 +3,9 @@ import propTypes from 'prop-types';
 import * as styles from './index.module.css';
 
 const Button = (props) => {
-  const { testId, category, onClick } = props;
+  const {
+    testId, category, onClick, click,
+  } = props;
   return (
     <div data-testid={testId}>
       <button type="button" className={styles.button} onClick={onClick}>
