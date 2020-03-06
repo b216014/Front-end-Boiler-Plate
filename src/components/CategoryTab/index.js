@@ -48,6 +48,11 @@ const CategoryTab = (props) => {
 
 CategoryTab.propTypes = {
   products: propTypes.array.isRequired,
+  setCartCount: propTypes.func.isRequired,
+  cartCount: propTypes.array.isRequired,
+  setProducts: propTypes.func.isRequired,
+  cartContents: propTypes.array.isRequired,
+  setCartContents: propTypes.func.isRequired,
 };
 
 export default CategoryTab;
