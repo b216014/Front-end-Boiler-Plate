@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+    width: 88rem;
+    height: 100vh;
+    margin-left: 10rem;
+  }
+
+  .filter{
+    display: flex;
+  
+  }

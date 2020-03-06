@@ -2,15 +2,18 @@
     height: 14vh;
     width: 7vh;
     margin-bottom: 0rem;
-    margin-top: -6rem;
+    margin-left: 53rem;
+    margin-top: -3rem;
 }
 
 .header{
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     height: 5rem;
     width: 6rem;
-    align-items: flex-end;
+    align-items: flex-start;
     margin-right: 3rem;
     margin-top: 1rem;
+    margin-left: 50rem;
 }

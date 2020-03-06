@@ -1,34 +1,52 @@
-import React from 'react';
-import './App.css';
+import React, { useState, useEffect } from 'react';
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
+  BrowserRouter as Router, Link, Switch, Route,
 } from 'react-router-dom';
+import Axios from 'axios';
 import Header from './components/Header';
+import FilterCategories from './components/FilterCategories';
+import BillingPage from './components/BillingPage';
 
-const App = () => (
-  <div>
-    <div className="App">
-      <Header />
-    </div>
+const App = () => {
+  const [products, setProducts] = useState([]);
+  const [cartCount, setCartCount] = useState(0);
+  const [cartContents, setCartContents] = [{}];
 
-    <div className="container">
-      <div className="filter">
-        <h4>Filter Categories</h4>
+  useEffect(() => {
+    const getProducts = async () => {
+      const response = await Axios.get('http://localhost:8080/products');
+      setProducts(response.data);
+    };
+    getProducts();
+  }, []);
 
-        <ul>
-          <Link to="/products/all">
-            <button type="button">All</button>
-          </Link>
-        </ul>
+  // console.log('products countttt', products);
 
-      </div>
-    </div>
+  return (
+    <Router>
+      <Switch>
 
-  </div>
+        <Route exact path="/">
+          <div>
+            <Header cartCount={cartCount} />
+            <FilterCategories
+              products={products}
+              setCartCount={setCartCount}
+              cartCount={cartCount}
+              setProducts={setProducts}
+              cartContents={cartContents}
+              setCartContents={setCartContents}
+            />
+          </div>
+        </Route>
 
-);
+        <Route exact path="/billing">
+          <BillingPage cartCount={cartCount} products={products} />
+        </Route>
+
+      </Switch>
+    </Router>
+  );
+};
 
 export default App;
